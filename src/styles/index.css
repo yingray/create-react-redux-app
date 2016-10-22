@@ -4,4 +4,12 @@ body {
   font-family: sans-serif;
 }
 
+ul {
+  text-align: left;
+  border: solid 1px orangered;
+  background-color: lightpink;
+  margin: 0 auto;
+  max-width: 200px;
+}
+
 @import 'App.css';

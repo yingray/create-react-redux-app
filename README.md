@@ -2,6 +2,9 @@
 
 This project was bootstrapped with Create React App and Redux Structure.
 
+![demo](demo.gif)
+
+
 ## Dependencies
 
 * React

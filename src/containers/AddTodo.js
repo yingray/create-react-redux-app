@@ -15,10 +15,11 @@ let AddTodo = ({ dispatch }) => {
 				dispatch(addTodo(input.value))
 				input.value = ''
 			}}>
-				<input ref={node => {
-					input = node
-				}} />
-				<button type="submit">
+				<div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input className="mdl-textfield__input" type="text" id="sample3" ref={node => { input = node }}/>
+					<label className="mdl-textfield__label" for="sample3">Add Todo...</label>
+				</div>
+				<button type="submit" className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 					Add Todo
 				</button>
 			</form>

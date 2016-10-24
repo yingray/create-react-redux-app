@@ -1,13 +1,15 @@
 import React, { PropTypes } from 'react'
 
 const Todo = ({ onClick, completed, text }) => (
-	<li
-		onClick={onClick}
-		style={{
-			textDecoration: completed ? 'line-through' : 'none'
-		}}
+	<li className="mdl-list__item"
+	    onClick={onClick}
+	    style={{
+		    textDecoration: completed ? 'line-through' : 'none'
+	    }}
 	>
-		{text}
+		<span className="mdl-list__item-primary-content">
+            {text}
+        </span>
 	</li>
 )
 

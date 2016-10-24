@@ -4,12 +4,18 @@ body {
   font-family: sans-serif;
 }
 
-ul {
-  text-align: left;
-  border: solid 1px orangered;
-  background-color: lightpink;
+.demo-card-wide.mdl-card {
   margin: 0 auto;
-  max-width: 200px;
+  width: 90%;
+  max-width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
 }
 
 @import 'App.css';

@@ -9,23 +9,24 @@ const App = () => (
 	<div className="App">
 		<div className="App-header">
 			<img src={logo} className="App-logo" alt="logo"/>
-			<h2>Welcome to React-Redux</h2>
+			<h2>Create React Redux App</h2>
+			<h6>- Yingray Lu -</h6>
 		</div>
-		<div className="App-intro">
-			<br/>
 
-			<Card title="Todo">
-				<AddTodo />
-				<VisibleTodoList />
-				<Footer />
-			</Card>
+		<br/>
 
-			<br/>
+		<Card title="Todo">
+			<AddTodo />
+			<VisibleTodoList />
+			<Footer />
+		</Card>
 
-			<Card title="Weather"/>
+		<br/>
 
-			<br/>
-		</div>
+		<Card title="Weather"/>
+
+		<br/>
+
 	</div>
 )
 

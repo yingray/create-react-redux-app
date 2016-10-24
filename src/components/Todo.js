@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react'
 
 const Todo = ({ onClick, completed, text }) => (
-	<li className="mdl-list__item"
+	<tr>
+	<td className="mdl-data-table__cell--non-numeric"
 	    onClick={onClick}
 	    style={{
 		    textDecoration: completed ? 'line-through' : 'none'
@@ -10,7 +11,8 @@ const Todo = ({ onClick, completed, text }) => (
 		<span className="mdl-list__item-primary-content">
             {text}
         </span>
-	</li>
+	</td>
+	</tr>
 )
 
 Todo.propTypes = {

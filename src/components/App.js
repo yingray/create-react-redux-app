@@ -3,7 +3,7 @@ import logo from '../images/logo.svg'
 import Card from './Card'
 import Footer from './Footer'
 import AddTodo from '../containers/AddTodo'
-import VisibleTodoList from '../containers/VisibleTodoList'
+import TodoTable from '../components/TodoTable'
 
 const App = () => (
 	<div className="App">
@@ -11,13 +11,15 @@ const App = () => (
 			<img src={logo} className="App-logo" alt="logo"/>
 			<h2>Create React Redux App</h2>
 			<h6>- Yingray Lu -</h6>
+			<p>Github: <a href="https://github.com/yingray/create-react-redux-app">https://github.com/yingray/create-react-redux-app</a>
+			</p>
 		</div>
 
 		<br/>
 
-		<Card title="Todo">
+		<Card title="Redux Example - Todo List">
 			<AddTodo />
-			<VisibleTodoList />
+			<TodoTable />
 			<Footer />
 		</Card>
 

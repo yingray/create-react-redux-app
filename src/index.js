@@ -1,21 +1,21 @@
+import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import todoApp from './reducers'
-import './styles/index.css';
-// import App from './containers/App';
-import App from './components/App'
+// If your server supports server rendering, use browserHistory replace with hashHistory.
+import { Router, hashHistory } from 'react-router'
+import { syncHistoryWithStore } from 'react-router-redux'
+import { configureStore } from './store'
+import routes from './routes'
+import './styles/index.css'
 
-// Be aware that any fetch polyfill assumes a Promise polyfill is already present.
-// The easiest way to ensure you have a Promise polyfill is to enable Babel's ES6 polyfill in your entry point before any other code runs
-import 'babel-polyfill'
-
-let store = createStore(todoApp)
+const state = window.__initialState__ || undefined;
+const store = configureStore(hashHistory, state);
+const history = syncHistoryWithStore(hashHistory, store);
 
 render(
 	<Provider store={store}>
-		<App />
+		<Router history={history} routes={routes}/>
 	</Provider>,
 	document.getElementById('root')
 )

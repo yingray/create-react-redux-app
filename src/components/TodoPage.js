@@ -1,22 +1,17 @@
 import React from 'react'
-import Card from '../components/Card'
-import Footer from '../components/Footer'
-import AddTodo from './AddTodo'
-import TodoTable from '../components/TodoTable'
-
-import { connect } from 'react-redux'
-import { addTodo } from '../actions'
+import Card from './Card'
+import Footer from './Footer'
+import AddTodo from '../containers/AddTodo'
+import TodoTable from './TodoTable'
 
 let TodoPage = () => (
 	<div>
 		<Card title="Redux Example - Todo List">
 			<AddTodo />
-			{/*<TodoTable />*/}
+			<TodoTable />
 			<Footer />
 		</Card>
 	</div>
 )
-
-TodoPage = connect()(TodoPage)
 
 export default TodoPage

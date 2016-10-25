@@ -1,5 +1,5 @@
 import React from 'react'
-import Navigation from '../components/Navigation'
+import Navigation from './Navigation'
 import logo from '../images/logo.svg'
 
 const App = ({ children }) => (

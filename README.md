@@ -49,7 +49,7 @@ create-react-redux-app/
     actions/
         index.js
     components/
-        App.js
+        HomePage.js
         Card.js
         Footer.js
         Link.js
@@ -59,7 +59,7 @@ create-react-redux-app/
         ActionTypes.js
     containers/
         AddTodo.js
-        App.js
+        HomePage.js
         FilterLink.js
         VisibleTodoList.js
     images/

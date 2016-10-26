@@ -14,7 +14,7 @@ let store = createStore(todoApp)
 
 render(
 	<Provider store={store}>
-		<Index />
+		<HomePage />
 	</Provider>,
 	document.getElementById('root')
 )

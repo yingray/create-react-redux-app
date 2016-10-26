@@ -18,4 +18,15 @@ body {
   color: #fff;
 }
 
+.demo-card-square.mdl-card {
+  margin: 0 auto;
+  width: 320px;
+  height: 320px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+          url('https://getmdl.io/assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+}
+
 @import 'App.css';

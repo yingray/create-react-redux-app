@@ -9,32 +9,24 @@ const checkStatus = response => {
 	}
 }
 
-export const createFetch = (url, query, successCallback, failCallback) => {
-	fetch(url, query)
-		.then(checkStatus)
-		// .then(res => res.json())
-		.then(res => {
-			if (successCallback) {
-				successCallback(res)
-			}
-		})
-		.catch(error => {
-			console.log(error)
-			if (failCallback) {
-				failCallback(error)
-			}
-		})
+function createQuery(method, body) {
+	const query = {
+		"method": method,
+		"headers": {
+			"Accept": "application/json",
+			"Content-type": "application/json;charset=UTF-8"
+		},
+		"credentials": "include"
+	}
+	if (body) {
+		query.body = JSON.stringify(body);
+	}
+	return query
 }
 
-export const createJsonpFetch = (url, query, successCallback, failCallback) => {
-	fetchJsonp(url, query)
-		.then(res => {
-			if (res.ok) {
-				return res
-			} else {
-				throw res
-			}
-		})
+export const createFetch = (param, successCallback, failCallback) => {
+	fetch(param.url, createQuery(param.method, param.body))
+		.then(checkStatus)
 		.then(res => res.json())
 		.then(res => {
 			if (successCallback) {
@@ -49,18 +41,27 @@ export const createJsonpFetch = (url, query, successCallback, failCallback) => {
 		})
 }
 
-export function createQuery(method, body, cookie) {
-	const query = {
-		"method": method,
-		"headers": {
-			"Accept": "application/json",
-			"Content-type": "application/json;charset=UTF-8"
-		},
-		"credentials": `${cookie ? 'include' : ''}`,
-		"mode": 'no-cors'
+const checkJsonpStatus = response => {
+	if (response.ok) {
+		return response
+	} else {
+		throw response
 	}
-	if (body) {
-		query.body = JSON.stringify(body);
-	}
-	return query
+}
+
+export const createJsonpFetch = (param, successCallback, failCallback) => {
+	fetchJsonp(param.url, createQuery(param.method, param.body))
+		.then(checkJsonpStatus)
+		.then(res => res.json())
+		.then(res => {
+			if (successCallback) {
+				successCallback(res)
+			}
+		})
+		.catch(error => {
+			console.log(error)
+			if (failCallback) {
+				failCallback(error)
+			}
+		})
 }

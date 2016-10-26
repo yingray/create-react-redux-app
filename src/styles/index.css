@@ -21,7 +21,7 @@ body {
 .demo-card-square.mdl-card {
   margin: 0 auto;
   width: 320px;
-  height: 320px;
+  height: 380px;
 }
 .demo-card-square > .mdl-card__title {
   color: #fff;

@@ -2,7 +2,13 @@
 
 This project was bootstrapped with Create React App and Redux Structure.
 
+Todo List (Redux):
+
 ![demo](demo.gif)
+
+API (fetch):
+
+![demo-api](demo-api.gif)
 
 
 ## Dependencies

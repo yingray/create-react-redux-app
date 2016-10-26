@@ -2,10 +2,10 @@ import _ from 'lodash'
 
 const initialState = {
 	loading: false,
-	city: 'Taipei City',
-	date: "Wed, 26 Oct 2016 08:00 AM CST",
-	temp: "80",
-	text: "Mostly Sunny",
+	city: 'Initial',
+	date: "Initial",
+	temp: "Initial",
+	text: "Initial",
 }
 
 const weatherReducer = (state = initialState, action) => {

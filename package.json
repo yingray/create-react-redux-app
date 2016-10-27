@@ -8,7 +8,6 @@
     "fetch-jsonp": "^1.0.2",
     "gh-pages": "^0.11.0",
     "isomorphic-fetch": "^2.2.1",
-    "lodash": "^4.16.4",
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
     "react-router-redux": "^4.0.6",

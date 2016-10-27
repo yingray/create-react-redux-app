@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from '../actions'
+import { addTodo } from '../actions/todoActions'
 
 let AddTodo = ({ dispatch }) => {
 	let input
@@ -16,8 +16,8 @@ let AddTodo = ({ dispatch }) => {
 				input.value = ''
 			}}>
 				<div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					<input className="mdl-textfield__input" type="text" id="todoInput" ref={node => { input = node }}/>
 					<label className="mdl-textfield__label" htmlFor="todoInput">Add Todo...</label>
+					<input className="mdl-textfield__input" type="text" id="todoInput" ref={node => { input = node }}/>
 				</div>
 				<button type="submit" className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 					Add Todo

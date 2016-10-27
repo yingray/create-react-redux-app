@@ -11,7 +11,7 @@ const Navigation = ({ className, buttonClassName }) => (
 
 Navigation.defaultProps = {
 	className: '',
-	buttonClassName: 'mdl-button mdl-js-button mdl-button--primary'
+	buttonClassName: 'mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'
 }
 
 export default Navigation

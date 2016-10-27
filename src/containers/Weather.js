@@ -16,7 +16,7 @@ const Weather = ({ weatherState, actions }) => (
 		<div className="mdl-card__actions mdl-card--border">
 			<a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
 			   onClick={actions.getWeather}>
-				View Updates&nbsp;
+				&nbsp;View Updates&nbsp;
 				{weatherState.loading ? <i className="material-icons" style={{"animation": "App-logo-spin infinite 2s linear"}}>rotate_right</i> : ''}
 			</a>
 		</div>

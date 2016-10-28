@@ -9,5 +9,7 @@ branches:
   only:
   - master
   - gh-pages
+before_install:
+  - npm install -g coveralls
 script:
-  - npm test -- --coverage
+  - npm test -- --coverage | coveralls

@@ -5,6 +5,7 @@
   "homepage": "http://yingray.github.io/create-react-redux-app",
   "devDependencies": {
     "babel-polyfill": "^6.16.0",
+    "expect": "^1.20.2",
     "fetch-jsonp": "^1.0.2",
     "gh-pages": "^0.11.0",
     "isomorphic-fetch": "^2.2.1",

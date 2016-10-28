@@ -10,4 +10,4 @@ branches:
   - master
   - gh-pages
 script:
-  - npm test
+  - npm test -- --coverage

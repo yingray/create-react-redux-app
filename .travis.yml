@@ -5,5 +5,9 @@ node_js:
 cache:
   directories:
     - node_modules
+branches:
+  only:
+  - master
+  - gh-pages
 script:
   - npm test

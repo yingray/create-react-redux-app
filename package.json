@@ -1,7 +1,6 @@
 {
   "name": "create-react-redux-app",
   "version": "0.1.0",
-  "private": true,
   "homepage": "http://yingray.github.io/create-react-redux-app",
   "devDependencies": {
     "babel-polyfill": "^6.16.0",

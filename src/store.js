@@ -6,8 +6,6 @@ import todos from './reducers/todos'
 import visibilityFilter from './reducers/visibilityFilter'
 import weatherReducer from './reducers/weatherReducer'
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
 export function configureStore(history, initialState) {
 
     const reducer = combineReducers({
@@ -16,6 +14,8 @@ export function configureStore(history, initialState) {
         weatherReducer,
         routing: routerReducer
     })
+
+    const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
     
     const store = createStore(
         reducer,

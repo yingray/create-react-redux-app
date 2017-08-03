@@ -1,5 +1,5 @@
 import expect from 'expect'
-import reducer from '../../src/reducers/weatherReducer'
+import reducer from './weatherReducer'
 
 describe('weather reducer:', () => {
 

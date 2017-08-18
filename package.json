@@ -3,8 +3,10 @@
   "version": "0.2.0",
   "homepage": "http://yingray.github.io/create-react-redux-app",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run watch:css & react-scripts start",
+    "build": "npm run build:css && react-scripts build",
+    "build:css": "node-sass-chokidar src/styles -o src/styles",
+    "watch:css": "node-sass-chokidar src/styles -o src/styles --watch --recursive",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
@@ -20,12 +22,12 @@
     "fetch-jsonp": "^1.0.2",
     "gh-pages": "^1.0.0",
     "isomorphic-fetch": "^2.2.1",
-    "react-mdl": "^1.10.3",
-    "react-redux": "^5.0.5",
+    "node-sass-chokidar": "^0.0.3",
+    "react-redux": "^5.0.6",
     "react-router": "^3.0.5",
     "react-router-redux": "^4.0.8",
     "react-scripts": "1.0.7",
-    "redux": "^3.7.0",
+    "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
   }
 }

@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/yingray/create-react-redux-app.svg?branch=master)](https://travis-ci.org/yingray/create-react-redux-app)
 [![Coverage Status](https://coveralls.io/repos/github/yingray/create-react-redux-app/badge.svg?branch=master)](https://coveralls.io/github/yingray/create-react-redux-app?branch=master)
 
+# We will have the new structure for REDUX soon! (Sep. 2017)
+
 This project was bootstrapped with Create React App and Redux Structure.
 
 Todo List (Redux):

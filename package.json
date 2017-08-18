@@ -17,6 +17,7 @@
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
+    "api-book": "^0.2.4",
     "babel-polyfill": "^6.23.0",
     "expect": "^1.20.2",
     "fetch-jsonp": "^1.0.2",

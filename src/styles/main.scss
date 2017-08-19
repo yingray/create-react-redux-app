@@ -1,9 +1,15 @@
 @import "vendors/fonts";
 
+@import "config/variable";
+
 @import "base/normalize",
         "base/typography";
 
-@import "pages/app";
+@import "pages/home",
+        "pages/todo",
+        "pages/app";
 
-@import "components/button",
+@import "components/header",
+        "components/button",
+        "components/todo",
         "components/demo";

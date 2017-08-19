@@ -2,30 +2,42 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions/todoActions'
 
-let AddTodo = ({ dispatch }) => {
-	let input
+class AddTodo extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      input: ''
+    }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
 
-	return (
-		<div>
-			<form onSubmit={e => {
-				e.preventDefault()
-				if (!input.value.trim()) {
-					return
-				}
-				dispatch(addTodo(input.value))
-				input.value = ''
-			}}>
-				<div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					<label className="mdl-textfield__label" htmlFor="todoInput">Add Todo...</label>
-					<input className="mdl-textfield__input" type="text" id="todoInput" ref={node => { input = node }}/>
-				</div>
-				<button type="submit" className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-					Add Todo
-				</button>
-			</form>
-		</div>
-	)
+  handleChange(e) {
+    this.setState({ input: e.target.value })
+  }
+
+  handleSubmit(e) {
+    const { props: { dispatch }, state: { input } } = this
+    e.preventDefault()
+    if (!input.trim()) {
+      return
+    }
+    dispatch(addTodo(input))
+    this.setState({ input: '' })
+  }
+
+  render() {
+    return (
+      <form className="c-todo__section" onSubmit={this.handleSubmit}>
+        <input className="c-todo__input" type="text" onChange={this.handleChange} value={this.state.input} />
+        <button type="submit" className="c-todo__icon">
+          <i className="material-icons">assignment_returned</i>
+        </button>
+      </form>
+    )
+  }
 }
+
 AddTodo = connect()(AddTodo)
 
 export default AddTodo

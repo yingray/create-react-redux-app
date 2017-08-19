@@ -5,7 +5,7 @@ const headers = {
 const options = {}
 const book = {
   getWeather: {
-    url: 'https://query.yahooapis.com/v1/public/yql',
+    url: '/v1/public/yql',
     method: 'GET',
     payload: {
       query: {
@@ -29,6 +29,7 @@ function toJsonMiddleware(response) {
   return response.json()
 }
 const Apis = new ApiBook.ApiCreator(book, {
+  host: 'https://query.yahooapis.com',
   fetchAndThen: [statusMiddleware, toJsonMiddleware]
 })
 export default Apis

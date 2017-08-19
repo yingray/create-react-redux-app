@@ -3,20 +3,20 @@ import Card from '../components/Card'
 
 const HomePage = () => {
   const content = {
-    title: 'Material Design Lite',
+    title: 'Welcome to CRRS-APP',
     article:
-      'lets you add a Material Design look and feel to your websites. It doesn’t rely on any JavaScript frameworks and aims to optimize for cross-device use, gracefully degrade in older browsers, and offer an experience that is immediately accessible. Get started now.'
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum facere assumenda libero maiores rem veritatis quisquam saepe unde quam, molestiae iste in rerum magnam temporibus, impedit commodi dicta officiis aliquid?'
   }
 
   return (
-    <Card title="Index">
-      <strong>
+    <main className="p-home">
+      <h3 className="p-home__title">
         {content.title}
-      </strong>
-      <p>
+      </h3>
+      <article className="p-home__article">
         {content.article}
-      </p>
-    </Card>
+      </article>
+    </main>
   )
 }
 

@@ -9,11 +9,13 @@ export const loadWeather = () => ({
   type: 'WEATHER_SHOW_LOADING'
 })
 
-export const getWeather = () => dispatch => {
+export const getWeather = () => async dispatch => {
   dispatch(loadWeather())
   const request = { city: 'taipei' }
-  weatherApi
-    .getWeather(request)
-    .then(response => dispatch(showWeather(response)))
-    .catch(error => {})
+  try {
+    const response = await weatherApi.getWeather(request)
+    dispatch(showWeather(response))
+  } catch(e) {
+    console.error(e)
+  }
 }

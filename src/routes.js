@@ -1,17 +1,17 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 import App from './components/App'
-import HomePage from './components/HomePage'
-import TodoPage from './components/TodoPage'
-import WeatherPage from './components/WeatherPage'
+import Home from './pages/Home'
+import Todo from './pages/Todo'
+import Weather from './pages/Weather'
 
 const routes = (
-	<Route path="/" component={App}>
-		<IndexRoute component={HomePage}/>
-		<Route path="home" component={HomePage}/>
-		<Route path="todo" component={TodoPage}/>
-		<Route path="weather" component={WeatherPage}/>
-	</Route>
+  <Route path="/" component={App}>
+    <IndexRoute component={Home} />
+    <Route path="home" component={Home} />
+    <Route path="todo" component={Todo} />
+    <Route path="weather" component={Weather} />
+  </Route>
 )
 
 export default routes

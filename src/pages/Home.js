@@ -1,11 +1,10 @@
 import React from 'react'
-import Card from '../components/Card'
 
 const HomePage = () => {
   const content = {
     title: 'Welcome to CRRS-APP',
     article:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum facere assumenda libero maiores rem veritatis quisquam saepe unde quam, molestiae iste in rerum magnam temporibus, impedit commodi dicta officiis aliquid?'
+      'This project was bootstrapped with Create React App and Redux + SASS Structure.'
   }
 
   return (

@@ -9,7 +9,7 @@ body
   color: $base_font_color
 
 h1, h2, h3, h4, h5, h6
-  text-align: center
+  // text-align: center
   margin-top: 10px
   margin-bottom: 10px
 
@@ -33,22 +33,21 @@ input:focus
   color: $base_font_color
 
 button
-  display: inline-block
-  margin: 0 10px
-  background-color: #A082D1
-  width: 130px
-  height: 40px
-  color: #fff
-  text-transform: uppercase
+  background-color: #fff
+  width: 100px
+  height: 100px
   outline: none
-  border: solid 1px $base_border_color
-  border-radius: 2em
+  border: none
+  border-radius: 50%
   cursor: pointer
   transition: all 1s ease 0s
+  text-transform: uppercase
+  color: #888
   &:hover
-    background-color: #eee
+    background-color: #ddd
   &:disabled
     cursor: auto
+
 strong
   display: block
   margin-bottom: 10px
@@ -57,3 +56,4 @@ main
   width: 100%
   max-width: 600px
   margin: 0 auto
+  padding: 20px

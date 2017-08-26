@@ -5,14 +5,14 @@ const headers = {
 const options = {}
 const book = {
   getWeather: {
-    url: '/v1/public/yql',
+    url: '/v1/public/{{search_type}}',
     method: 'GET',
     payload: {
       query: {
         q:
           'select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="{{city}}, ak")',
         format: 'json',
-        env: 'store://datatables.org/alltableswithkeys'
+        env: '{{env}}'
       }
     },
     headers: headers,

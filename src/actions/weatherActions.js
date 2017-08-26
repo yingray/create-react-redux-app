@@ -11,7 +11,11 @@ export const loadWeather = () => ({
 
 export const getWeather = () => async dispatch => {
   dispatch(loadWeather())
-  const request = { city: 'taipei' }
+  const request = {
+    city: 'taipei',
+    search_type: 'yql',
+    env: 'store://datatables.org/alltableswithkeys'
+  }
   try {
     const response = await weatherApi.getWeather(request)
     dispatch(showWeather(response))

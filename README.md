@@ -5,6 +5,8 @@
 
 This project was bootstrapped with Create React App and Redux, Sass Structure.
 
+Demo: [https://yingray.github.io/create-react-redux-app](https://yingray.github.io/create-react-redux-app/#/)
+
 # Todo List
 
 * react + redux sample practice

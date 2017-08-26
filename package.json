@@ -1,6 +1,6 @@
 {
   "name": "create-react-redux-app",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "homepage": "http://yingray.github.io/create-react-redux-app",
   "scripts": {
     "start": "npm run watch:css & react-scripts start",
@@ -20,9 +20,7 @@
     "api-book": "^0.2.4",
     "babel-polyfill": "^6.23.0",
     "expect": "^1.20.2",
-    "fetch-jsonp": "^1.0.2",
     "gh-pages": "^1.0.0",
-    "isomorphic-fetch": "^2.2.1",
     "node-sass-chokidar": "^0.0.3",
     "react-redux": "^5.0.6",
     "react-router": "^3.0.5",

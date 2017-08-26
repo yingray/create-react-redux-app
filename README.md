@@ -1,54 +1,61 @@
-[![Create React Redux App](readme/cover.png)](https://yingray.github.io/create-react-redux-app/)
+# [![Create React Redux App](readme/cover.png)](https://yingray.github.io/create-react-redux-app/)
 
 [![Build Status](https://travis-ci.org/yingray/create-react-redux-app.svg?branch=master)](https://travis-ci.org/yingray/create-react-redux-app)
 [![Coverage Status](https://coveralls.io/repos/github/yingray/create-react-redux-app/badge.svg?branch=master)](https://coveralls.io/github/yingray/create-react-redux-app?branch=master)
 
-# We will have the new structure for REDUX soon! (Sep. 2017)
+This project was bootstrapped with Create React App and Redux, Sass Structure.
 
-This project was bootstrapped with Create React App and Redux Structure.
+# Todo List
 
-Todo List (Redux):
+* react + redux sample practice
 
 ![demo](readme/demo.gif)
 
-API (fetch):
+# fetch API
+
+* Handle async event
+
+* async/await + api-book sample practice
 
 ![demo-api](readme/demo-api.gif)
 
+# Getting Started
 
 ## Dependencies
 
 * React
-    * react
-    * react-dom
+  * react
+  * react-dom
 
 * Create React App
-    * react-scripts
+  * react-scripts
 
 * Redux
-    * redux
-    * react-redux
-    * react-router
-    * react-router-redux
-    * redux-thunk
-    
+  * redux
+  * react-redux
+  * react-router
+  * react-router-redux
+  * redux-thunk
+
+* Sass
+  * node-sass-chokidar
+
 * Fetch
-    * babel-polyfill
-    * isomorphic-fetch
+  * api-book
+  * babel-polyfill
 
 * Github Deployment Tool
     * gh-pages
 
-## Getting Started
+## Installation
 
-### Installation
-
-To create a new react-redux app, run:
+To create a new react-redux-sass app, run:
 
 ```sh
 git clone https://github.com/yingray/create-react-redux-app.git ~/create-react-redux-app
 cd ~/create-react-redux-app
-npm install
+# yarn or npm install
+yarn
 ```
 
 It will create a directory called **create-react-redux-app** inside the current folder.
@@ -58,55 +65,76 @@ Inside that directory, it will generate the initial project structure and instal
 create-react-redux-app/
   src/
     actions/
-        index.js
+      todoActions.js
+      weatherActions.js
     components/
-        HomePage.js
-        Card.js
-        TodoFooter.js
-        Link.js
-        Todo.js
-        TodoList.js
+      App.js
+      Header.js
+      Link.js
+      Navigation.js
+      Todo.js
+      TodoFooter.js
+      TodoList.js
     constants/
-        ActionTypes.js
+      ActionTypes.js
     containers/
-        AddTodo.js
-        HomePage.js
-        FilterLink.js
-        VisibleTodoList.js
+      AddTodo.js
+      FilterLink.js
+      VisibleTodoList.js
+      Weather.js
     images/
-        logo.svg
+      logo.svg
+    pages/
+      Home.js
+      Todo.js
+      Weather.js
     reducers/
-        index.js
-        todos.js
-        visibilityFilter.js
+      todos.js
+      visibilityFilter.js
+      weatherReducer.js
+    services/
+      weatherApi.js
     styles/
-        App.css
-        index.css
+      base/
+      components/
+      config/
+      layout/
+      pages/
+      utils/
+      vendors/
+      main.scss
     index.js
-  test/
-    App.spec.js
-    
+    registerServiceWorker.js
+    routes.js
+    store.js
   --
-  README.md
-  node_modules/
-  package.json
-  .gitignore
+  tests/
+    components/
+      App.spec.js
+    reducers/
+      weatherReducer.spec.js
+  --
   public/
     favicon.ico
     index.html
+  --
+  node_modules/
+  .editorconfig
+  package.json
+  README.md
 ```
 
-### Runs the app in development mode:
+### Runs the app in development mode
 
-```
+```bash
 npm start
 ```
 
-Open http://localhost:3000 to view it in the browser.
+Open `http://localhost:3000` to view it in the browser.
 
-### Runs the test watcher in an interactive mode:
+### Runs the test watcher in an interactive mode
 
-```
+```bash
 npm test
 ```
 
@@ -114,7 +142,7 @@ By default, runs tests related to files changes since the last commit.
 
 ### Builds the app for production to the build folder:
 
-```
+```bash
 npm run build
 ```
 
@@ -124,18 +152,20 @@ Your app is ready to be deployed!
 
 Reference: https://github.com/facebookincubator/create-react-app
 
-### Deploys the production to github.io page:
+### Deploys the production to github.io page
 
 Changes package.json
- 
-```
+
+```js
 "homepage": "http://{account_name}.github.io/{project_name}",
+"scripts": {
+  "predeploy": "npm run build"
+}
 ```
 
 And runs
 
-```
-npm run build
+```bash
 npm run deploy
 ```
 

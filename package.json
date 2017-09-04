@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "homepage": "http://yingray.github.io/create-react-redux-app",
   "scripts": {
-    "start": "npm run watch:css & react-scripts start",
+    "start": "npm run build:css; (npm run watch:css & react-scripts start)",
     "build": "npm run build:css && react-scripts build",
     "build:css": "node-sass-chokidar src/styles -o src/styles",
     "watch:css": "node-sass-chokidar src/styles -o src/styles --watch --recursive",

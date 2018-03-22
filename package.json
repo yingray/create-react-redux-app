@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "homepage": "http://yingray.github.io/create-react-redux-app",
   "scripts": {
-    "start": "npm run build:css && (npm run watch:css & react-scripts start)",
+    "prestart": "npm run build:css",
+    "start": "npm run watch:css & react-scripts start",
     "build": "npm run build:css && react-scripts build",
     "build:css": "node-sass-chokidar src/styles -o src/styles",
     "watch:css": "node-sass-chokidar src/styles -o src/styles --watch --recursive",
@@ -13,19 +14,19 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "api-book": "^0.2.4",
-    "babel-polyfill": "^6.23.0",
-    "expect": "^1.20.2",
-    "gh-pages": "^1.0.0",
-    "node-sass-chokidar": "^0.0.3",
-    "react-redux": "^5.0.6",
-    "react-router": "^3.0.5",
+    "babel-polyfill": "^6.26.0",
+    "expect": "^22.4.3",
+    "gh-pages": "^1.1.0",
+    "node-sass-chokidar": "^1.2.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^3.2.1",
     "react-router-redux": "^4.0.8",
-    "react-scripts": "^1.0.17",
+    "react-scripts": "^1.1.1",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
   }

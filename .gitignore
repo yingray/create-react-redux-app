@@ -18,3 +18,4 @@ main.css
 npm-debug.log
 .idea
 
+*.log
